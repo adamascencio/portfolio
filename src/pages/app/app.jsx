@@ -1,14 +1,23 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Content from '../../components/Content/Content';
 import Footer from '../../components/Footer/Footer';
+import styled from 'styled-components';
 import './App.css';
+
+const StyledMain = styled.main`
+  text-align: center;
+  color: var(--slate);
+  padding: 0 15vw;
+`;
 
 export default function App() {
   return (
-    <main className='App'>
+    <>
       <Navbar />
-      <Content />
+      <StyledMain>
+        <Content />
+      </StyledMain>
       <Footer />
-    </main>
+    </>
   );
 }
