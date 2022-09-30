@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { navLinks } from '../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import './Navbar.css';
 
@@ -45,34 +45,78 @@ const StyledHamburgerButton = styled.button`
   }
 `;
 
-const StyledLinks = styled.div`
+const StyledXmarkButton = styled.button`
+  display: none;
+  @media (max-width: 768px) {
+    display: inline-block;
+    postion: relative;
+    z-index: 10;
+    margin-right: -15px;
+    padding: 15px;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+  }
+`;
+
+const StyledHorizontalLinks = styled.div`
   display: flex;
   align-items: center;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-
   ul {
     display: flex;
     justify-content: flex-end;
     padding: 0;
     margin: 0;
     list-style: none;
-
+    
     li {
       margin: 0 5px;
       position: relative;
-
+      
       a {
         padding: 10px;
         color: var(--light-slate);
       }
-
+      
       a:hover {
         color: var(--green);
       }
     }
+  }
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyledVerticalLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    li {
+      margin: 5px 0;
+      position: relative;
+      
+      a {
+        padding: 10px;
+        color: var(--light-slate);
+      }
+      
+      a:hover {
+        color: var(--green);
+      }
+    }
+  }
+
+    @media (min-width: 769px) {
+      display: none;
   }
 `;
 
@@ -93,14 +137,23 @@ export default function Navbar() {
     <StyledHeader>
       <StyledNav>
         <h1>Adam Ascencio</h1>
-        <StyledHamburgerButton onClick={toggleMenu}>
-          <FontAwesomeIcon icon={faBars} color='var(--green)' size='xl'/>
-        </StyledHamburgerButton>
-        <StyledLinks>
-          <ul>
-            {LinkLineItems}
-          </ul>
-        </StyledLinks>
+        {menuDropdown ? (
+          <StyledVerticalLinks>
+            <StyledXmarkButton onClick={toggleMenu}>
+              <FontAwesomeIcon icon={faXmark} color='var(--green)' size='xl' />
+            </StyledXmarkButton>
+            <ul>{LinkLineItems}</ul>
+          </StyledVerticalLinks>
+        ) 
+        : 
+        (
+          <StyledHamburgerButton onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} color='var(--green)' size='xl'/>
+          </StyledHamburgerButton>
+        )}
+        <StyledHorizontalLinks>
+          <ul>{LinkLineItems}</ul>
+        </StyledHorizontalLinks>
       </StyledNav>
     </StyledHeader>
   );
