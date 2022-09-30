@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 export default function AboutMe() {
   return (
     <section className='AboutMe'>

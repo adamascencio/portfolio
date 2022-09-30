@@ -83,6 +83,14 @@ const StyledVerticalLinks = styled(StyledHorizontalLinks)`
       margin: 5px 0;
     }
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 `;
 
 export default function Navbar() {
@@ -101,7 +109,7 @@ export default function Navbar() {
   return (
     <StyledHeader>
       <StyledNav>
-        <h1>Adam Ascencio</h1>
+        <h1>My Portfolio</h1>
         {menuDropdown ? (
           <StyledVerticalLinks>
             <StyledFaButton onClick={toggleMenu}>
