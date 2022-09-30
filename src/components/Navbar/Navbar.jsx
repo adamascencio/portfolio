@@ -3,7 +3,6 @@ import { navLinks } from '../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
-import './Navbar.css';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -31,25 +30,11 @@ const StyledNav = styled.nav`
   justify-content: space-between;
 `;
 
-const StyledHamburgerButton = styled.button`
+const StyledFaButton = styled.button`
   display: none;
   @media (max-width: 768px) {
     display: inline-block;
     position: relative;
-    z-index: 10;
-    margin-right: -15px;
-    padding: 15px;
-    border: 0;
-    background-color: transparent;
-    color: inherit;
-  }
-`;
-
-const StyledXmarkButton = styled.button`
-  display: none;
-  @media (max-width: 768px) {
-    display: inline-block;
-    postion: relative;
     z-index: 10;
     margin-right: -15px;
     padding: 15px;
@@ -89,34 +74,14 @@ const StyledHorizontalLinks = styled.div`
   }
 `;
 
-const StyledVerticalLinks = styled.div`
-  display: flex;
+const StyledVerticalLinks = styled(StyledHorizontalLinks)`
   flex-direction: column;
   ul {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    
+
     li {
       margin: 5px 0;
-      position: relative;
-      
-      a {
-        padding: 10px;
-        color: var(--light-slate);
-      }
-      
-      a:hover {
-        color: var(--green);
-      }
     }
-  }
-
-    @media (min-width: 769px) {
-      display: none;
   }
 `;
 
@@ -139,17 +104,17 @@ export default function Navbar() {
         <h1>Adam Ascencio</h1>
         {menuDropdown ? (
           <StyledVerticalLinks>
-            <StyledXmarkButton onClick={toggleMenu}>
+            <StyledFaButton onClick={toggleMenu}>
               <FontAwesomeIcon icon={faXmark} color='var(--green)' size='xl' />
-            </StyledXmarkButton>
+            </StyledFaButton>
             <ul>{LinkLineItems}</ul>
           </StyledVerticalLinks>
         ) 
         : 
         (
-          <StyledHamburgerButton onClick={toggleMenu}>
+          <StyledFaButton onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} color='var(--green)' size='xl'/>
-          </StyledHamburgerButton>
+          </StyledFaButton>
         )}
         <StyledHorizontalLinks>
           <ul>{LinkLineItems}</ul>
