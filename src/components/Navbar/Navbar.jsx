@@ -101,7 +101,7 @@ export default function Navbar() {
   const LinkLineItems = navLinks.map(link => {
     return (
       <li key={link.name}>
-        <a href={link.url}>{link.name}</a>
+        <a href={link.url} onClick={toggleMenu}>{link.name}</a>
       </li>
     );
   });
