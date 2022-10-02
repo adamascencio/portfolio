@@ -4,7 +4,8 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  margin-bottom: 100px;
 
   div {
     h2 {
@@ -25,8 +26,7 @@ const StyledContainer = styled.div`
     grid-template-areas:
       'project1 project1'
       'project2 project3';
-    gap: 5% 2%;
-    margin-bottom: 100px;
+    gap: 3% 7%;
 
     div:first-child {
       grid-area: project1;
@@ -36,14 +36,6 @@ const StyledContainer = styled.div`
       div {
         margin: 0 auto;
       }
-    }
-
-    div:nth-child(2) {
-      grid-area: project2;
-    }
-
-    div:nth-child(3) {
-      grid-area: project3;
     }
   }
 `;
@@ -70,6 +62,10 @@ const StyledWrapperDiv = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+
+  @media (max-width: 950px) {
+    width: 90%;
+  }
 `;
 
 const StyledText = styled.div`
@@ -96,6 +92,11 @@ const StyledImg = styled.img`
   width: clamp(300px, 40vw, 400px);
   height: clamp(300px, 40vw, 400px);
   object-fit: cover;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export default function Projects() {
