@@ -56,12 +56,12 @@ a:hover {
   color: inherit;
 }
 
-button:hover {
+/* button:hover {
   background-color: var(--green);
   color: var(--navy);
   border: 3px solid var(--navy);
   transform: scale(1.1);
-}
+} */
 
 h1 {
   color: var(--green);

@@ -4,6 +4,7 @@ const StyledDivContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 60%;
+  margin-bottom: 100px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -24,15 +25,16 @@ const StyledResumeItemContainer = styled.div`
     h2 {
       font-size: clamp(var(--fs-xxl), 4vw, var(--fs-heading));
       color: var(--lightest-slate);
+      margin-bottom: 20px;
     }
 
     h5 {
-      font-size: clamp(var(--fs-md), 4vw, var(--fs-xl));
+      font-size: clamp(var(--fs-lg), 4vw, var(--fs-xl));
       color: var(--light-slate);
     }
     ul {
       li {
-        font-size: clamp(var(--fs-sm), 1.5vw, var(--fs-md));
+        font-size: clamp(var(--fs-sm),4vw,var(--fs-lg));
       }
 
       li:last-child {
