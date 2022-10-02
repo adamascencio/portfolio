@@ -17,8 +17,9 @@ const StyledDiv = styled.div`
   display: grid;
   grid-template-columns: 60% 40%;
   justify-items: center;
-  align-items: center;
+  align-items: start;
   gap: 40px;
+  margin-bottom: 100px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -35,12 +36,12 @@ const StyledText = styled.div`
     text-align: left;
     font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));
     line-height: 1.5;
-    margin-top: 2%;
+    margin-bottom: 20px;
   }
 `;
 
 const StyledDivWrapper = styled.div`
-  width: clamp(300px, 80%, 600px);
+  width: clamp(300px, 100%, 600px);
   justify-self: center;
 
   @media (max-width: 768px) {
@@ -68,6 +69,10 @@ const StyledSkillsContainer = styled.div`
 
   div:last-child {
     align-self: flex-start;
+  }
+
+  @media (max-width: 900px) {
+    width: 70%;
   }
 
   @media (max-width: 768px) {
