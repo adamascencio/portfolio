@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className='Contact'>
+    <section id='contact'>
       <h1 className='align-heading'>Contact</h1>
     </section>
   );

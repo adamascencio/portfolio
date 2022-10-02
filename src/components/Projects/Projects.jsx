@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  justify-content: center;
+  gap: 20px;
 
   div {
     h2 {
@@ -24,7 +25,7 @@ const StyledContainer = styled.div`
     grid-template-areas:
       'project1 project1'
       'project2 project3';
-    gap: 7%;
+    gap: 5% 2%;
     margin-bottom: 100px;
 
     div:first-child {
@@ -92,8 +93,8 @@ const StyledText = styled.div`
 `;
 
 const StyledImg = styled.img`
-  width: clamp(300px, 40vw, 500px);
-  height: clamp(300px, 40vw, 500px);
+  width: clamp(300px, 40vw, 400px);
+  height: clamp(300px, 40vw, 400px);
   object-fit: cover;
 `;
 
@@ -114,8 +115,8 @@ export default function Projects() {
       href: 'https://the-power-list.herokuapp.com/'
     },
     {
-      name: 'BlackJack', 
-      description: 'A simple game of BlackJack',
+      name: 'Blackjack', 
+      description: 'A simple game of Blackjack',
       tech: ['HTML', 'CSS', 'JavaScript'],
       src: 'https://i.imgur.com/Ipi0qn0.png', 
       href: 'https://adamascencio.github.io/Blackjack/'
