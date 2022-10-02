@@ -24,7 +24,7 @@ const StyledSection = styled.section`
     text-align: left;
     line-height: 1.5;
     margin-top: 2%;
-    font-size: clamp(var(--fs-xs), 4vw, var(--fs-lg));
+    font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));;
     width: 50%;
 
     @media (max-width: 768px) {
@@ -49,8 +49,6 @@ const StyledWrapperDiv = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 150px;
-    height: 150px;
     margin: 0 auto 50px;
   }
 `;
@@ -75,7 +73,7 @@ export default function AboutMe() {
   return (
     <StyledSection id='home'>
       <StyledWrapperDiv>
-        <StyledImg src='https://i.imgur.com/U2FVrZG.jpg' alt='cover photo' />
+        <StyledImg src='https://i.imgur.com/fFWkHBZ.jpg' alt='cover photo' />
       </StyledWrapperDiv>
       {items.map((item, i) => (
         <div key={i}>{item}</div>
