@@ -30,6 +30,11 @@ code {
   --green-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
+  --html5-orange: rgb(208, 63, 31);
+  --css3-blue: rgb(32, 65, 213);
+  --js-yellow: rgb(226, 203, 66);
+  --bs-purple: rgb(107, 19, 237); 
+  --mongo-green: rgb(0, 222, 84);
   --fs-xxs: 12px;
   --fs-xs: 13px;
   --fs-sm: 14px;
@@ -39,9 +44,38 @@ code {
   --fs-xxl: 22px;
   --fs-heading: 32px;
   --border-radius: 4px;
-  --nav-height: 100px;
+  --nav-height: 50px;
 }
 
 a {
   text-decoration: none;
+  color: inherit
+}
+
+a:hover {
+  color: inherit;
+}
+
+button:hover {
+  background-color: var(--green);
+  color: var(--navy);
+  border: 3px solid var(--navy);
+  transform: scale(1.1);
+}
+
+h1 {
+  color: var(--green);
+}
+
+.align-heading {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.center-btn {
+  display: flex;
+}
+
+.span-2 {
+  grid-column: span 2;
 }

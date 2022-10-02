@@ -8,6 +8,10 @@ const StyledMain = styled.main`
   text-align: center;
   color: var(--slate);
   padding: 0 15vw;
+
+  @media (max-width: 768px) {
+    padding: 0 5vw;
+  }
 `;
 
 export default function App() {
