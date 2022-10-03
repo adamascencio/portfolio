@@ -109,7 +109,7 @@ export default function Navbar() {
   return (
     <StyledHeader>
       <StyledNav>
-        <h1><a href='/#home'>My Portfolio</a></h1>
+        <h1><a href='#home'>My Portfolio</a></h1>
         {menuDropdown ? (
           <StyledVerticalLinks>
             <StyledFaButton onClick={toggleMenu}>
