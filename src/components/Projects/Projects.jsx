@@ -103,7 +103,7 @@ export default function Projects() {
   const projects = [
     {
       name: 'HomeCourt', 
-      description: 'A platform to find and create pick-up games in their local communities.',
+      description: 'A platform to find and create pick-up games in your local community.',
       tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Google Maps API'],
       src: 'https://i.imgur.com/0ZgfHL4.png',
       href: 'https://home-court-cap.herokuapp.com/'
