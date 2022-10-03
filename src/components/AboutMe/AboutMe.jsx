@@ -21,7 +21,7 @@ const StyledDiv = styled.div`
   gap: 40px;
   margin-bottom: 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -44,8 +44,8 @@ const StyledDivWrapper = styled.div`
   width: clamp(300px, 100%, 600px);
   justify-self: center;
 
-  @media (max-width: 768px) {
-    width: 250px;
+  @media (max-width: 1000px) {
+    width: clamp(250px, 40vw, 350px);
   }
 
   @media (max-width: 480px) {
@@ -59,31 +59,30 @@ const StyledImg = styled.img`
 `;
 
 const StyledSkillsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  width: 60%;
+  gap: 40px 30px;
+  width: 80%;
   margin: 40px 0 0 10%;
 
-  div:last-child {
-    align-self: flex-start;
-  }
-
-  @media (max-width: 900px) {
-    width: 70%;
+  @media (max-width: 1000px) {
+    width: 80%;
+    margin: 50px auto;
   }
 
   @media (max-width: 768px) {
-    width: 80%;
-    margin: 20px auto;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    column-gap: 20px;
   }
 `;
 
 const StyledSkill = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   p {
     font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));
@@ -118,7 +117,7 @@ export default function AboutMe() {
   const about = (
     <>
       <p>
-        Hi! I'm Adam and I love building things for the web. 
+        Hi! I'm Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I've been hooked ever since.
       </p>
 
       <p>
@@ -126,7 +125,7 @@ export default function AboutMe() {
       </p>
 
       <p>
-        I'm looking to work on consumer-facing products that improve people's lives.
+        I'm looking to work on consumer-facing products that improve people's lives. I've recently completed a full-stack software engineering bootcamp at General Assembly. See below for some of the technologies I've been working with recently.
       </p>
     </>
   );

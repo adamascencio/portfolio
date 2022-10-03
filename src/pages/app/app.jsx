@@ -14,14 +14,22 @@ const StyledMain = styled.main`
   }
 `;
 
+const StyledGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+`;
+
 export default function App() {
   return (
     <>
       <Navbar />
-      <StyledMain>
-        <Content />
-      </StyledMain>
-      <Footer />
+      <StyledGrid>
+        <StyledMain>
+          <Content />
+        </StyledMain>
+        <Footer />
+      </StyledGrid>
     </>
   );
 }

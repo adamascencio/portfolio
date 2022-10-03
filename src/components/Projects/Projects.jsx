@@ -30,7 +30,7 @@ const StyledContainer = styled.div`
 
     div:first-child {
       grid-area: project1;
-      width: 70%;
+      width: 90%;
       justify-self: center;
 
       div {

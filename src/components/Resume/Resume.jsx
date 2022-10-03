@@ -82,7 +82,7 @@ export default function Resume() {
               <li>Train incoming staff on essential Microsoft Excel functions</li>
             </ul>
             <div className='center-btn'>
-              <StyledButton><a href='https://www.google.com/' target='_blank' rel='noopener noreferrer' >View Resume</a></StyledButton>
+              <StyledButton><a href='https://drive.google.com/file/d/18yxItLHJQMpkHE-dHjL_FCxyRXDNrirJ/view?usp=sharing' target='_blank' rel='noopener noreferrer' >View Resume</a></StyledButton>
             </div>
           </div>
         </StyledResumeItemContainer>
