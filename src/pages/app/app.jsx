@@ -9,6 +9,10 @@ const StyledMain = styled.main`
   color: var(--slate);
   padding: 0 15vw;
 
+  @media (max-width: 1000px) {
+    padding: 0 10vw;
+  }
+
   @media (max-width: 768px) {
     padding: 0 5vw;
   }
