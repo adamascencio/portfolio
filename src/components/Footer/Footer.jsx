@@ -5,7 +5,6 @@ import { faGithub, faLinkedin, faCodepen } from '@fortawesome/free-brands-svg-ic
 
 const StyledFooter = styled.footer`
   padding-top: 16px;
-  width: 100vw;
   height: auto;
   align-self: end;
   text-align: center;
