@@ -131,7 +131,7 @@ export default function AboutMe() {
   );
 
   return (
-    <StyledSection id='about'>
+    <StyledSection id='about' className='heading-margin'>
       <h1 className='align-heading'>About Me</h1>
       <StyledDiv>
         <StyledText>

@@ -55,7 +55,7 @@ const StyledButton = styled.button`
 
 export default function Resume() {
   return (
-    <section className='Resume' id='resume'>
+    <section className='Resume heading-margin' id='resume'>
       <h1 className='align-heading'>Prior Experience</h1>
       <StyledDivContainer>
         <StyledResumeItemContainer>

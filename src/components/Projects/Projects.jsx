@@ -147,7 +147,7 @@ export default function Projects() {
   });
 
   return (
-    <section className='Projects' id='projects'>
+    <section className='Projects heading-margin' id='projects'>
       <h1 className='align-heading'>Projects</h1>
       <StyledContainer>
         {projectList}
