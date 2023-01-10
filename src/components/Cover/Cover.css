@@ -1,4 +1,0 @@
-.heading {
-  font-size: clamp(var(--fs-heading), 4vw, 5rem);
-  font-weight: 700;
-}
