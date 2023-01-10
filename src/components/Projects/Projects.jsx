@@ -6,44 +6,30 @@ const StyledContainer = styled.div`
   justify-content: center;
   gap: 50px;
   margin-bottom: 100px;
+  text-align: left;
 
   div {
     h2 {
-      font-size: clamp(var(--fs-xxl),4vw,var(--fs-heading));
+      font-size: clamp(var(--fs-xxl),5vw,var(--fs-heading));
       color: var(--lightest-slate);
     }
 
     p {
-      font-size: clamp(var(--fs-lg),4vw,var(--fs-xl));
+      font-size: clamp(var(--fs-lg),3.5vw,var(--fs-xl));
       color: var(--light-slate);
     }
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 768px) {
     display: grid; 
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'project1 project1'
-      'project2 project3';
-    gap: 3% 7%;
-
-    div:first-child {
-      grid-area: project1;
-      width: 90%;
-      justify-self: center;
-
-      div {
-        margin: 0 auto;
-      }
-    }
+    gap: 75px 50px;
   }
 `;
 
 const StyledProjectDiv = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 20px;
 
   * {
@@ -54,17 +40,14 @@ const StyledProjectDiv = styled.div`
 const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   row-gap: 10px;
 `;
 
 const StyledWrapperDiv = styled.div`
   position: relative;
-  overflow: hidden;
-  border-radius: 20px;
 
   @media (max-width: 950px) {
-    width: 90%;
+    
   }
 `;
 
@@ -92,6 +75,7 @@ const StyledImg = styled.img`
   width: clamp(300px, 40vw, 400px);
   height: clamp(300px, 40vw, 400px);
   object-fit: cover;
+  border-radius: 20px;
 
   @media (max-width: 950px) {
     width: 100%;
@@ -101,6 +85,14 @@ const StyledImg = styled.img`
 
 export default function Projects() {
   const projects = [
+    {
+      name: 'Travel Buddy',
+      description: 'A web app to find restaurants, hotels, and attractions in a given city.',
+      tech: ['React', 'Node.js', 'Google Maps API', 'Google Autocomplete', 'Travel Advisor API'],
+      src: 'https://i.imgur.com/Q2z0h0f.png',
+      href: 'https://travel-bud-react.netlify.app',
+      github: 'https://github.com/adamascencio/Travel-App'
+    },
     {
       name: 'HomeCourt', 
       description: 'A platform to find and create pick-up games in your local community.',

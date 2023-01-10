@@ -33,11 +33,11 @@ const StyledNav = styled.nav`
 const StyledFaButton = styled.button`
   display: none;
   @media (max-width: 768px) {
-    display: inline-block;
-    position: relative;
+    display: block;
+    position: absolute;
     z-index: 10;
-    margin-right: -15px;
-    padding: 15px;
+    right: 0;
+    top: 5px;
     border: 0;
     background-color: transparent;
     color: inherit;
@@ -78,6 +78,10 @@ const StyledVerticalLinks = styled(StyledHorizontalLinks)`
   flex-direction: column;
   ul {
     flex-direction: column;
+    background-color: var(--navy);
+    width: 20vw;
+    text-align: center;
+    margin-top: 40px;
 
     li {
       margin: 5px 0;
